@@ -36,12 +36,14 @@
 </div>
 {{ end }}
 
+{{ range first 1 (after 1 $reusablePages) }}
 {{ $services := where (where .Site.RegularPages "Type" "services") ".Params.featured" true }}
 {{if gt (len $services) 0}}
 <div class="container pt-8 pb-8 pb-md-14 pt-md-14">
   <div class="row justify-content-start">
-    <div class="col-12">
-      <h2 class="text-center mb-3">Our Services</h2>
+    <div class="col-12 text-center">
+      <h2>{{ .Title }}</h2>
+      <p>{{ .Content }}</p>
     </div>
     {{ range first 6 (sort $services ".Params.weight") }}
     <div class="col-12 col-md-4 mb-1">
@@ -49,13 +51,14 @@
     </div>
     {{ end }}
     <div class="col-12 text-center">
-      <a class="button button-primary" href="{{ .Site.BaseURL }}services">View All Services</a>
+      <a class="button button-primary" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
     </div>
   </div>
 </div>
 {{end}}
+{{ end }}
 
-{{ range first 1 (after 1 $reusablePages) }}
+{{ range first 1 (after 2 $reusablePages) }}
 <div id="home" class="strip bg-primary bg-cover bg-position-top bg-overlay" style='background-image: url("{{ .Params.background | relURL }}");'>
   <div class="container pt-8 pb-8 pb-md-12 pt-md-12">
     <div class="row justify-content-center">

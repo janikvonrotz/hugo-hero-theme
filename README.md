@@ -15,5 +15,7 @@ Hero is a multi-page, multi-purpose business theme with fullscreen hero images a
 - Services (Markdown)
 - Work/Portfolio (Markdown)
 - Features (Data)
+- Clients (Data)
+- Technologies (Data)
 - About (Markdown, Single Page, Shortcodes)
-- Homepage (Markdown, Single Page, multiple .md files in one layout)
+- Homepage (Markdown, Single Page, Headless)
