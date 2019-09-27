@@ -5,9 +5,11 @@ themesDir = "../.."
 theme = "hugo-hero-theme"
 
 [params]
-  google_analytics_id=""
+  google_analytics_id = ""
+  logo_url = "/images/logo.svg"
+  logo_mobile_url = "/images/logo-mobile.svg"
 
-  [params.homepage_meta_tags]
+[params.homepage_meta_tags]
     meta_description = "Hero is a multipurpose Hugo theme with fullscreen hero images and page sections. It contains content types for a business or portfolio site."
     meta_og_title = "Hugo Hero Theme"
     meta_og_type = "website"
@@ -37,6 +39,16 @@ theme = "hugo-hero-theme"
     name = "Contact"
     url = "/contact/"
     weight = 4
+
+[[menu.footer]]
+	name = "Home"
+	url = "/"
+    weight = 1
+
+[[menu.footer]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 2
 
 [permalinks]
   post = "/:year/:month/:day/:slug/"
