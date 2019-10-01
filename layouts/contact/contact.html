@@ -1,8 +1,7 @@
-{{ define "header_css" }}{{ end }}
-{{ define "body_classes" }}page-contact{{ end }}
-{{ define "header_classes" }}{{ end }}
+{{ define "body_classes" }}{{ end }}
 
 {{ define "main" }}
+
 <div class="intro intro-small">
   <div class="container">
     <div class="row">
@@ -12,18 +11,27 @@
     </div>
   </div>
 </div>
+
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 pb-md-3">
+
       {{ .Content }}
+
       <ul>
-        <li><strong>Phone: </strong>{{ .Site.Data.contact.phone }}</li>
+        <li><strong>Phone: </strong><a href="tel:{{ .Site.Data.contact.phone }}">{{ .Site.Data.contact.phone }}</a></li>
         <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
             {{ .Site.Data.contact.email }}</a></li>
         {{ if .Site.Data.contact.address }}
         <li><strong>Address: </strong>{{ .Site.Data.contact.address }}</li>
         {{ end }}
       </ul>
+
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ .Params.map }}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
     </div>
   </div>
 </div>
