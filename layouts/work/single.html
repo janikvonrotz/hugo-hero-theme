@@ -43,7 +43,7 @@
         {{ $selectedTechnologies := .Params.technologies }}
         {{ range $index, $technology := .Site.Data.technologies }}
         {{ if in $selectedTechnologies $technology.key }}
-          <a href="{{ $technology.link }}" target="_blank"><img src="{{ $technology.logo }}" alt="{{ $technology.name }}"></a>
+          <a href="{{ $technology.link }}" target="_blank"><img height="64px" width="64px" src="{{ $technology.logo }}" alt="{{ $technology.name }}"></a>
         {{ end }}
         {{ end }}
       </div>
