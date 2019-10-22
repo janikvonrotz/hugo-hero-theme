@@ -1,4 +1,6 @@
 .DS_Store
+default.vim
+*.swp
 node_modules
 .idea
 public

@@ -1,0 +1,5 @@
+{{ range $client := .Site.Data.clients }}
+<span class="py-2">
+  <a href="{{ $client.link }}" target="_blank"><img width="265px" src="{{ $client.logo }}" alt="{{ $client.name }}"></a>
+</span>
+{{ end }}
