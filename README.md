@@ -15,6 +15,7 @@ Hero is a multi-page, multi-purpose business theme with fullscreen hero images a
 - Projects, services, features and clients for business showcase
 - Open Graph metadata
 - Twitter Cards
+- Headless content
 
 ## Installation
 

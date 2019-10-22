@@ -1,0 +1,46 @@
+{{ define "main" }}
+
+<div id="home" class="container pt-8 pb-8 pt-md-10 pb-md-10">
+  <div class="row justify-content-center">
+
+    <section class="post">
+
+      <article>
+
+        <div class="text-center">
+          <img class="img-fluid" src=" {{ .Params.image }}" />
+        </div>
+
+        <h1 class="mt-2">{{ .Title }}</h1>
+
+        <p class="date">{{ .Date.Format "January 2, 2006" }}</p>
+
+        <section>
+          {{ .Content }}
+
+          <p class="categories">Categories:&nbsp;
+            {{ range $i, $e := .Params.categories }}
+            {{if $i}},{{end}}
+            <a href="/blog/categories/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </p>
+
+          <p class="tags">Tags:&nbsp;
+            {{ range $i, $e := .Params.tags }}
+            {{if $i}},{{end}}
+            <a href="/blog/tags/{{ . | urlize }}">{{ . }}</a>
+            {{ end }}
+          </p>
+
+        </section>
+
+      </article>
+
+      {{ template "_internal/disqus.html" . }}
+
+    </section>
+
+  </div>
+</div>
+
+{{ end }}

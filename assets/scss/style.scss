@@ -11,7 +11,7 @@
 @import 'bootstrap/grid';
 @import 'bootstrap/type';
 @import 'bootstrap/tables';
-// @import "bootstrap/images";
+@import "bootstrap/images";
 // @import "bootstrap/code";
 // @import "bootstrap/forms";
 // @import "bootstrap/buttons";
@@ -43,19 +43,16 @@
 @import 'libraries/hamburgers/hamburgers';
 
 // Components
-@import 'components/reset';
 @import 'components/page';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/sub-footer';
 @import 'components/logo';
-@import 'components/logo-client';
 @import 'components/main-menu';
 @import 'components/main-menu-mobile';
 @import 'components/social';
 @import 'components/hamburger';
 @import 'components/buttons';
-@import 'components/title';
 @import 'components/content';
 @import 'components/intro';
 @import 'components/strip';
@@ -63,6 +60,9 @@
 @import 'components/feature';
 @import 'components/hero-image';
 @import 'components/bg';
+@import 'components/code';
+@import 'components/logo-client';
+@import 'components/posts';
 
 // Pages
 @import 'pages/services/page-services-list';
