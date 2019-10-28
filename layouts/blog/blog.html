@@ -9,7 +9,7 @@
 
       <article>
 
-        {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+        {{ $paginator := .Paginate (where .Site.Pages "Section" "post") }}
         {{ range $paginator.Pages }}
 
         <div class="text-center">
