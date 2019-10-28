@@ -37,13 +37,13 @@ Take a look at the sample [config.toml](https://github.com/janikvonrotz/hugo-her
 
 Showcase projects.
 
-Run `hugo new work/<work-name>.md to create a project.
+Run `hugo new work/<work-name>.md` to create a project.
 
 ### Services
 
 Showcase services.
 
-Run `hugo new services/<service-name>.md to create a service.
+Run `hugo new services/<service-name>.md` to create a service.
 
 ### Post
 
