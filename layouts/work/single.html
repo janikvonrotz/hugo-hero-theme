@@ -19,7 +19,7 @@
           <div class="carousel-inner">
             {{ range $index, $image := .Params.images }}
             <div class="carousel-item {{ if (eq $index 0) }}active{{ end }}">
-              <img src="{{ $image.url }}" class="d-block w-100" alt="{{ $image.name }}">
+              <div style="background-image:url({{ $image.url }})" class="d-block w-100 image" title="{{ $image.name }}"></div>
             </div>
             {{ end }}
           </div>
@@ -43,7 +43,7 @@
         {{ $selectedTechnologies := .Params.technologies }}
         {{ range $index, $technology := .Site.Data.technologies }}
         {{ if in $selectedTechnologies $technology.key }}
-          <a href="{{ $technology.link }}" target="_blank"><img height="64px" width="64px" src="{{ $technology.logo }}" alt="{{ $technology.name }}"></a>
+          <a href="{{ $technology.link }}" target="_blank"><div style="background-image:url({{ $technology.logo }})" title="{{ $technology.name }}" class="tech-image"></div></a>
         {{ end }}
         {{ end }}
       </div>

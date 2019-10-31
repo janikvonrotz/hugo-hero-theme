@@ -1,5 +1,6 @@
 .logo {
   display: none;
+  padding: 10px;
   @include media-breakpoint-up(sm) {
     display: block;
     width: 120px;
@@ -15,6 +16,7 @@
   }
 }
 .logo-mobile {
+  padding: 10px;
   display: block;
   width: 80px;
   @include media-breakpoint-up(sm) {
