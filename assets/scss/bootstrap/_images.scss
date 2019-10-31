@@ -7,6 +7,11 @@
 // See also https://github.com/twbs/bootstrap/issues/18178
 .img-fluid {
   @include img-fluid;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  width: auto;
+  height: 200px;
 }
 
 

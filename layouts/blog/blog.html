@@ -13,7 +13,7 @@
         {{ range $paginator.Pages }}
 
         <div class="text-center">
-         <a href="{{ .RelPermalink }}"><img class="img-fluid" src=" {{ .Params.image }}" /></a>
+         <a href="{{ .RelPermalink }}"><div class="img-fluid" style="background-image:url({{ .Params.image }})" ></div></a>
         </div>
 
         <a href="{{ .RelPermalink }}">
