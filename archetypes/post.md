@@ -8,5 +8,6 @@ tags:
  - hello
  - world
 image: "/posts/Writing.png"
+author: janikvonrotz
 draft: true
 ---
