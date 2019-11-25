@@ -1,0 +1,25 @@
+{{ define "body_classes" }}page-products-single{{ end }}
+
+{{ define "main" }}
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "section" .Section "content" .)}}
+<div class="container pt-4 pt-md-10 pb-4 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <div class="service service-single">
+        <div class="content">{{.Content}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ define "footer_js" }}
+{{ $library := resources.Get "js/libs/library.js" }}
+{{ $products := resources.Get "js/pages/products.js" }}
+{{ $productsJS := slice $library $products | resources.Concat "js/products.js" }}
+{{ if .Site.IsServer }}
+  <script type="text/javascript" src="{{ $productsJS.RelPermalink }}"></script>
+  {{ else }}
+  <script type="text/javascript" src="{{ ($productsJS | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+{{ end }}
